@@ -1,0 +1,4 @@
+aws_region    = "eu-central-1"
+project_name  = "tutorials-app"
+callback_urls = ["http://127.0.0.1:5500/callback.html"]
+logout_urls   = ["http://127.0.0.1:5500/index.html"]
