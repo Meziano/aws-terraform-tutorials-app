@@ -22,4 +22,8 @@ locals {
     Project   = var.project_name
     ManagedBy = "terraform"
   }
+  archive = {
+    source  = "hashicorp/archive"
+    version = ">= 2.0"
+  }
 }
