@@ -25,3 +25,11 @@ output "lambda_sg_id" {
 output "rds_sg_id" {
   value = aws_security_group.rds_sg.id
 }
+output "db_host" {
+  description = "Host name of the database (only reachable inside the VPC)"
+  value       = aws_db_instance.tutorials_db.address
+}
+
+output "db_name" {
+  value = aws_db_instance.tutorials_db.db_name
+}
