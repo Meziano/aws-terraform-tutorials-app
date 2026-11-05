@@ -1,0 +1,39 @@
+# -----------------------------
+# Terraform
+# -----------------------------
+infra/.terraform/
+infra/*.tfstate
+infra/*.tfstate.*
+infra/terraform.tfvars
+infra/*.tfplan
+infra/*.plan
+infra/build/
+infra/crash.log
+infra/crash.*.log
+response.json
+
+# -----------------------------
+# Backend (Lambda)
+# -----------------------------
+backend/build/
+__pycache__/
+*.pyc
+backend/**/.venv/
+backend/**/venv/
+
+# -----------------------------
+# Frontend
+# -----------------------------
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+
+# -----------------------------
+# General / editor / OS
+# -----------------------------
+.env
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
