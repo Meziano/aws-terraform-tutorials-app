@@ -33,3 +33,8 @@ output "db_host" {
 output "db_name" {
   value = aws_db_instance.tutorials_db.db_name
 }
+
+output "api_url" {
+  description = "Base address of the API"
+  value       = aws_apigatewayv2_api.tutorials_api.api_endpoint
+}

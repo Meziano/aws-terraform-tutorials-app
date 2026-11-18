@@ -80,3 +80,9 @@ variable "lambda_runtime" {
   type        = string
   default     = "python3.12"
 }
+
+variable "cors_allowed_origins" {
+  description = "Origins (scheme, host, port; no path) that may call the API from a browser"
+  type        = list(string)
+  default     = ["http://127.0.0.1:5500"]
+}
