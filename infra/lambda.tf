@@ -38,32 +38,29 @@ locals {
   }
 }
 
-# ---------------------------------------------------------------------------
-# Zips: Terraform packs the code folders
-# (step 7 changes source_dir to ../backend/build/<function>)
-# ---------------------------------------------------------------------------
 
+# Zips: Terraform packs the folders that backend/build.sh produced
 data "archive_file" "get_tutorials_zip" {
   type        = "zip"
-  source_dir  = "${path.module}/../backend/get_tutorials"
+  source_dir  = "${path.module}/../backend/build/get_tutorials"
   output_path = "${path.module}/build/get_tutorials.zip"
 }
 
 data "archive_file" "init_db_zip" {
   type        = "zip"
-  source_dir  = "${path.module}/../backend/init_db"
+  source_dir  = "${path.module}/../backend/build/init_db"
   output_path = "${path.module}/build/init_db.zip"
 }
 
 data "archive_file" "create_tutorial_zip" {
   type        = "zip"
-  source_dir  = "${path.module}/../backend/create_tutorial"
+  source_dir  = "${path.module}/../backend/build/create_tutorial"
   output_path = "${path.module}/build/create_tutorial.zip"
 }
 
 data "archive_file" "rate_tutorial_zip" {
   type        = "zip"
-  source_dir  = "${path.module}/../backend/rate_tutorial"
+  source_dir  = "${path.module}/../backend/build/rate_tutorial"
   output_path = "${path.module}/build/rate_tutorial.zip"
 }
 
