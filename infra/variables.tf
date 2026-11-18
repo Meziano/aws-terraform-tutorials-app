@@ -74,3 +74,9 @@ variable "db_engine_version" {
   type        = string
   default     = "16"
 }
+
+variable "lambda_runtime" {
+  description = "Python runtime of the Lambda functions"
+  type        = string
+  default     = "python3.12"
+}
